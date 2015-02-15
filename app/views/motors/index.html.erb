@@ -1,8 +1,8 @@
-<div id="pins transitions-enabled">
+<div  class="transitions-enabled" id="motors">
 	<% @motor.each do |motor| %>
 	<div class="box panel panel-default">
 
-		<%= link_to(image_tag motor.image.url(),motor) %>
+		<%= link_to (image_tag motor.image.url()),motor %>
 		<div class="panel-body">
 			<h2> <%= link_to motor.platno, motor %></h2>
 			<p class="user">

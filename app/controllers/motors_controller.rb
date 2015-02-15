@@ -12,6 +12,13 @@ class MotorsController < ApplicationController
 	end
 
 	def create
+		@motor = current_user.motor.build(motor_params)
+
+		if @motor.save
+			redirect_to @motor, notice: "Successfully posting new ads"
+		else
+			render 'new'
+		end
 	end
 
 	def edit
