@@ -1,6 +1,7 @@
 class MotorController < ApplicationController
 
 	def index
+		@motor = Motor.all.order("created_at DESC")
 	end
 
 	def new
@@ -25,7 +26,11 @@ class MotorController < ApplicationController
 	private
 
 	def motor_params
-		params.required(:motor).permit
+		params.required(:motor).permit(:platno,:merk_id,:type_id,:harga,:warna,:tahun,,:image)
+	end
+
+	def find_motor
+		@motor = Motor.find(params[:id])
 	end
 
 end
