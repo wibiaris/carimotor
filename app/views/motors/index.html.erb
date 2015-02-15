@@ -1,0 +1,15 @@
+<div id="pins transitions-enabled">
+	<% @motor.each do |motor| %>
+	<div class="box panel panel-default">
+
+		<%= link_to(image_tag motor.image.url(),motor) %>
+		<div class="panel-body">
+			<h2> <%= link_to motor.platno, motor %></h2>
+			<p class="user">
+				Submited by
+				<%= motor.user.email %>
+			</p>
+		</div>
+	</div>
+	<% end %>
+</div>

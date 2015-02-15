@@ -1,5 +1,4 @@
-class MotorController < ApplicationController
-
+class MotorsController < ApplicationController
 	before_action :find_motor, only: [:show, :edit, :update, :destroy]
 	before_action :authenticate_user!, except: [:index, :show]
 
@@ -36,5 +35,4 @@ class MotorController < ApplicationController
 	def find_motor
 		@motor = Motor.find(params[:id])
 	end
-
 end

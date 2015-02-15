@@ -1,0 +1,19 @@
+<%= simple_form_for @motor, html: { multipart: true } do |f| %>
+	<% if @motor.errors.any? %>
+	<div id="errors">
+		<h2>
+			<%= pluralize(@motor.errors.count, "error") %>
+		</h2>
+		<ul>
+			<% @motor.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+
+		</ul>
+	</div>
+	<% end %>
+	<div class="form-group">
+		<%= f.input :image, input_html: { clas: 'form-control' } %>
+	</div>
+
+	<% end %>
