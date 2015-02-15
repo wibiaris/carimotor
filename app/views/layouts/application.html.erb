@@ -22,7 +22,7 @@
 				
 		     <% else %>
 		     <ul class="nav navbar-nav navbar-rigt">
-					<li><%=link_to "Jual Motor", root_path %></li>
+					<li><%=link_to "Jual Motor", new_motor_path %></li>
 					<li><%= link_to "Account",edit_user_registration_path %></li>
 					<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete%></li>
 				</ul>
